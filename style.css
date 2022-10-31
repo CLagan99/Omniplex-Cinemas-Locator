@@ -1,0 +1,556 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    background-color: black;
+    font-family: 'Oswald', sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* NAVIGATION MENU */
+
+#main_menu {
+    width: 100%;
+    position: relative;
+}
+
+.omniplex-logo {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    content: '';
+    margin-left: -120px;
+    margin-top: 20px;
+}
+
+.inner_main_menu {
+    margin: 0 auto;
+    width: 1170px;
+}
+
+.inner_main_menu ul {
+    margin: 0;
+    padding: 80px 50px 0 80px;
+    list-style: none;
+    text-align: right;
+}
+
+.inner_main_menu ul li {
+    float: none;
+    display: inline-block;
+}
+
+.inner_main_menu ul li:nth-child(1) {
+    float: left;
+}
+
+.inner_main_menu ul li:nth-child(2) {
+    float: left;
+}
+
+.inner_main_menu ul li a {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+}
+
+.inner_main_menu ul li a:hover {
+    color: yellow;
+}
+
+/* MAIN INFO */
+
+.info {
+    position: relative;
+    padding: 100px;
+    background: #000000;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.info img {
+    margin-top: -65px;
+}
+
+.info h2 {
+    font-size: 4.2em;
+    margin-bottom: 100px;
+    color: #fff;
+    font-family:'Agency FB', cursive;
+}
+
+.info h3 {
+    font-size: 3.3em;
+    margin-bottom: 10px;
+    margin-top: 90px;
+    color: #fff;
+    font-family:'Agency FB', cursive;
+}
+
+.info h4 {
+    font-size: 4.2em;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    color: #fff;
+    font-family:'Agency FB', cursive;
+}
+
+.home-info {
+    font-size: 1.35em;
+    color: #fff;
+    margin-top: 5px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.about-info {
+    font-size: 1.35em;
+    color: #fff;
+    margin-top: 50px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.movies-info {
+    font-size: 1.35em;
+    color: #fff;
+    margin-top: 5px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.contact-info {
+    font-size: 1.35em;
+    color: #fff;
+    margin-top: 50px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+/* CINEMA CAROUSEL */
+
+.cinema-carousel {
+    margin-top: -90px;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+  
+.carousel ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+  
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+    margin-left: 350px;
+    margin-right: 350px;
+}
+  
+.slide img {
+    display: block;
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+    object-position: center;
+}
+  
+.slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+}
+  
+.carousel-button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, .1);
+}
+  
+.carousel-button:hover,
+.carousel-button:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+}
+  
+.carousel-button:focus {
+    outline: 1px solid black;
+}
+  
+.carousel-button.prev {
+    left: 16rem;
+    top: 19rem;
+}
+  
+.carousel-button.next {
+    right: 16rem;
+    top: 19rem;
+}
+
+/* CINEMA INFO */
+
+.cinema-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10rem auto 0 auto;
+}
+
+.cinema-section h2 {
+    margin-top: -70px;
+    margin-left: 70px;
+    font-size: 1.7em;
+}
+
+.cinema-section img {
+    height: 500px;
+}
+
+.cinema-section iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 70px;
+    margin-top: -120px;
+}
+
+/* MOVIE CAROUSEL */
+
+::selection {
+    color: #181818;
+    background-color: yellow;
+}
+
+.movie-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-img {
+    width: 250px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.movie-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.movie-details {
+    color: white;
+    background: linear-gradient(90deg, #202020 20%, #222222);
+    width: 500px;
+    border-radius: 0px 10px 10px 0px;
+    font-family: 'Oswald', sans-serif;
+    margin: 0px 0px 100px 0px;
+}
+
+.movie-details strong {
+    color: #e4e4e4;
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+.movie-rating {
+    display: flex;
+    align-items: center;
+    margin: 5px 10px;
+}
+
+.movie-rating i {
+    color: yellow;
+    margin: 10px 2px;
+}
+
+.movie-details p {
+    color: #8f8f8f;
+    font-size: 0.9rem;
+    margin: 10px 0px 20px 0px;
+}
+
+.movie-age {
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+    margin-left: 20px;
+}
+
+.movie-rating img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.movie-card-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin: 0px 10px;
+}
+
+.movie-card-btns a {
+    min-width: 160px;
+    height: 40px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.book-btn {
+    background-color: #0d6bf7;
+}
+
+.book-btn i {
+    margin-right: 10px;
+}
+
+.trailer-btn {
+    color: white;
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #363636;
+}
+
+.movie-card-btns a:hover {
+    background-color: yellow;
+    transition: all ease 0.3s;
+    color: black;
+    border: none;
+    opacity: 1;
+}
+
+/* EVENTS SECTION */
+
+.event-container {
+    font-family:'Agency FB', cursive;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.event-container h3.year {
+    font-size: 40px;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    margin-top: 40px;
+}
+
+.event-container .event {
+    box-shadow: 0 4px 16px -8px rgb(255, 255, 255);
+    display: flex;
+    border-radius: 8px;
+    margin: 32px 0;
+}
+
+.event .event-left {
+    background: #fff;
+    min-width: 155px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding: 8px 48px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px 0 0 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.event .event-left .date {
+    font-size: 56px;
+}
+
+.event .event-left .month {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.event .event-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 24px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.event .event-right h3.event-title {
+    font-size: 24px;
+    margin: 24px 0 10px 0;
+    color: yellow;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+}
+
+.event .event-right .event-timing {
+    background: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    padding: 8px;
+    border-radius: 16px;
+    margin: 24px 0;
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+}
+
+@media (max-width: 550px) {
+    .event {
+        flex-direction: column;
+    }
+
+    .event .event-left {
+        padding: 0;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .event .event-left .event-date .date,
+    .event .event-left .event-date .month {
+        display: inline-block;
+        font-size: 24px;
+    }
+
+    .event .event-left .event-date {
+        padding: 10px 0;
+    }
+}
+
+/* CONTACT PAGE */
+
+.contact-container
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contactForm
+{
+    width: 40%;
+    padding: -40px;
+    background: black;
+}
+
+.contactForm .inputBox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.textarea-field
+{
+    height: 150px;
+    padding-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 5px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+    color: yellow;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]
+{
+    width: 100px;
+    background: yellow;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media (max-width: 991px)
+{
+    .contact-container
+    {
+        flex-direction: column;
+    }
+    .container .contactForm
+    {
+        width: 100%;
+    }
+}
